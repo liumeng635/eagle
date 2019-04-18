@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<environment id="development">
+		<!-- 数据库配置信息xml配置方式 -->
+		<!--<dataSource>
+			<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+			<property name="url" value="jdbc:mysql://127.0.0.1:3306/SLDT_ACTIVITI"/>
+			<property name="username" value="root"/>
+			<property name="password" value="root"/>
+			<property name="initialSize" value="3"/>
+			<property name="maxActive" value="20"/>
+			<property name="minIdle" value="3"/>
+			<property name="maxWait" value="60000"/>
+			<property name="poolPreparedStatements" value="true"/>
+			<property name="maxPoolPreparedStatementPerConnectionSize" value="33"/>
+			<property name="validationQuery" value="select 1 from dual"/>
+			<property name="testOnBorrow" value="false"/>
+			<property name="testOnReturn" value="false"/>
+			<property name="testWhileIdle" value="true"/>
+			<property name="timeBetweenEvictionRunsMillis" value="60000"/>
+			<property name="minEvictableIdleTimeMillis" value="25200000"/>
+			<property name="removeAbandoned" value="true"/>
+			<property name="removeAbandonedTimeout" value="1800"/>
+			<property name="logAbandoned" value="true"/>
+		</dataSource>-->
+		
+		<!--properties文件配置方式-->
+		<dataSource>
+			<context-path>/sqlConfig/dataSource.properties</context-path>
+		</dataSource>
+		
+	</environment>
+	
+	<mappers>
+		<mapper namespace="userMapper" resource="eagle/UserMapper.xml"/>
+	</mappers>
+</configuration>

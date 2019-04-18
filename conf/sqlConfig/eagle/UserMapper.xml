@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper>
+	<statement id="queryUserDetail" resultType="String" paramType="com.eagle.entity.TsmUser"> 
+		select t.user_name from t_sm_user t where 1=1 and user_name = #{userName}
+		<if test="userId != null and userId !='' ">
+			and user_id = #{userId}
+		</if>
+	</statement>
+	
+	<statement id="queryUser" resultType="com.eagle.entity.TsmUser" paramType="java.util.Map"> 
+		select * from t_sm_user t where 1=1 and user_name = #{userName}
+		<if test="userId != null and userId !='' ">
+			and user_id = #{userId}
+		</if>
+	</statement>
+</mapper>
